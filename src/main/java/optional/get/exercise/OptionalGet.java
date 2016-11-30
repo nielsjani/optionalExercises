@@ -1,5 +1,7 @@
 package optional.get.exercise;
 
+import optional.get.Username;
+
 import java.util.Optional;
 
 public class OptionalGet {
@@ -22,5 +24,11 @@ public class OptionalGet {
         return null;
     }
 
+    public String getValueOrThrowException() {
+        return null;
+    }
 
+    public Username mapToUsername(){
+        return null;
+    }
 }

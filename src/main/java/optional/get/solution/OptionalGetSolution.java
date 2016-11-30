@@ -1,6 +1,7 @@
 package optional.get.solution;
 
 import optional.get.MyService;
+import optional.get.Username;
 
 import java.util.Optional;
 
@@ -23,5 +24,13 @@ public class OptionalGetSolution {
     public String getValueOrUseSupplier() {
         MyService myService = new MyService();
         return optionalValue.orElseGet(myService.myServiceSupplier());
+    }
+
+    public String getValueOrThrowException() {
+        return optionalValue.orElseThrow(() -> new IllegalArgumentException("This optional is empty"));
+    }
+
+    public Username mapToUsername() {
+        return optionalValue.map(Username::new).orElse(null);
     }
 }
