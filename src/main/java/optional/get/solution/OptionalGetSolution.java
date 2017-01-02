@@ -1,7 +1,7 @@
 package optional.get.solution;
 
-import optional.get.MyService;
-import optional.get.Username;
+import optional.common.MyService;
+import optional.common.Username;
 
 import java.util.Optional;
 

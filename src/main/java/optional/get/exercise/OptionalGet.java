@@ -1,6 +1,6 @@
 package optional.get.exercise;
 
-import optional.get.Username;
+import optional.common.Username;
 
 import java.util.Optional;
 

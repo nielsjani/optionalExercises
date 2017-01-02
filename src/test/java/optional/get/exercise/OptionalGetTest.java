@@ -1,7 +1,7 @@
 package optional.get.exercise;
 
-import optional.get.MyService;
-import optional.get.Username;
+import optional.common.MyService;
+import optional.common.Username;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

@@ -1,1 +1,2 @@
-Hello world
+These exercices are based on the excellent talk _Optional - The Mother of All Bikesheds_ by _Stuart Marks_ at Devoxx Belgium 2016.
+You can watch the video [here](https://www.youtube.com/watch?v=Ej0sss6cq14)

@@ -1,4 +1,4 @@
-package optional.get;
+package optional.common;
 
 public class Username {
 
