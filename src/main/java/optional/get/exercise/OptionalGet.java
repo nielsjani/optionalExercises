@@ -31,4 +31,8 @@ public class OptionalGet {
     public Username mapToUsername(){
         return null;
     }
+
+    public Optional<String> flatMap() {
+        return null;
+    }
 }

@@ -2,6 +2,7 @@ package optional.get.exercise;
 
 import optional.common.MyService;
 import optional.common.Username;
+import optional.get.solution.OptionalGetSolution;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -62,5 +63,20 @@ public class OptionalGetTest {
     public void mapToUsername_GivenOptionalValueEmpty_ThenReturnNull(){
         OptionalGet optionalGet = new OptionalGet();
         assertThat(optionalGet.mapToUsername()).isNull();
+    }
+
+    @Test
+    public void flatMap_GivenOptionalValue_ThenReturnMappedOptional(){
+        OptionalGet optionalGet = new OptionalGet("size5");
+        assertThat(optionalGet.flatMap())
+                .isNotEmpty()
+                .contains("5");
+    }
+
+    @Test
+    public void flatMap_GivenOptionalValueEmpty_ThenReturnEmptyOptional(){
+        OptionalGet optionalGet = new OptionalGet();
+        assertThat(optionalGet.flatMap())
+                .isEmpty();
     }
 }

@@ -64,4 +64,19 @@ public class OptionalGetSolutionTest {
         OptionalGetSolution optionalGet = new OptionalGetSolution();
         assertThat(optionalGet.mapToUsername()).isNull();
     }
+
+    @Test
+    public void flatMap_GivenOptionalValue_ThenReturnMappedOptional(){
+        OptionalGetSolution optionalGet = new OptionalGetSolution("size5");
+        assertThat(optionalGet.flatMap())
+                .isNotEmpty()
+                .contains("5");
+    }
+
+    @Test
+    public void flatMap_GivenOptionalValueEmpty_ThenReturnEmptyOptional(){
+        OptionalGetSolution optionalGet = new OptionalGetSolution();
+        assertThat(optionalGet.flatMap())
+                .isEmpty();
+    }
 }

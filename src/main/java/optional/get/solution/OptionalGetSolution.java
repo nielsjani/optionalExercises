@@ -2,6 +2,7 @@ package optional.get.solution;
 
 import optional.common.MyService;
 import optional.common.Username;
+import optional.get.exercise.OptionalGet;
 
 import java.util.Optional;
 
@@ -32,5 +33,10 @@ public class OptionalGetSolution {
 
     public Username mapToUsername() {
         return optionalValue.map(Username::new).orElse(null);
+    }
+
+
+    public Optional<String> flatMap() {
+        return optionalValue.flatMap(value -> Optional.of(value.length()+""));
     }
 }
